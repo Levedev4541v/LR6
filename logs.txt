@@ -1,0 +1,42 @@
+git clone https://github.com/Levedev4541v/LR6
+cd LR6/
+git config --local user.name Levedev4541v
+git config --local user.email ilyal.contact@gmail.com
+git pull
+git log
+git branch -a
+git show HEAD
+git checkout -b new_branch
+nano text_file.txt
+git add .
+git commit -m "изменения text_file.txt в ветке branch"
+git checkout master
+nano text_file.txt
+git add .
+git commit -m "изменения text_file.txt в ветке master"
+git merge new_branch
+nano text_file.txt
+git add .
+git commit -m "Разрешение конфликта"
+git log --all --oneline --graph --decorate
+git branch -d new_branch
+nano text_file.txt
+git add .
+git commit -m "первое изменение"
+nano text_file.txt
+git add .
+git commit -m "второе изменение"
+nano text_file.txt
+git add .
+git commit -m "третье изменение"
+git log --oneline
+git revert e8ee3c6
+git revert --abort
+git reset --hard e8ee3c6
+git log --oneline
+git checkout -b report_for_lab
+git branch -a
+git log --pretty=format:"%h %ad %an %s" --date=short
+git add .
+git commit -m "создание ветки отчёта и внесение первых изменений в readme"
+git push --set-upstream origin report_for_lab
